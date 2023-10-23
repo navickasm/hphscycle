@@ -1,0 +1,180 @@
+var SpecialSchedule = {
+  enable: false,
+  dowOverride: 0,
+  times: ["7:15", "8:05", "8:10", "9:00", null, null, "9:05", "9:55", "10:00", "10:48", "10:53", "11:42", "11:33", "12:22", "12:27", "13:17", "13:22", "14:12", null, null, "10:18", "10:48", "10:53", "11:28", "11:22", "11:52", "11:47", "12:23"],
+  nums: ["EB", "1", null, "2", "5", "6-I", "6-II", "9", "8", null],
+  cycleName: "",
+  h2: "",
+  link: ""
+};
+window.SpecialSchedule = SpecialSchedule;
+
+var scheduleData = [
+  {
+    "startDate": "2023-09-04",
+    "endDate": "2023-09-08",
+    "weekSchedules": [
+      10,
+      2,
+      3,
+      {
+        "times": [
+          "7:15",
+          "8:05",
+          "8:10",
+          "9:00",
+          null,
+          null,
+          "9:05",
+          "9:55",
+          "10:00",
+          "10:48",
+          "10:53",
+          "11:42",
+          "11:33",
+          "12:22",
+          "12:27",
+          "13:17",
+          "13:22",
+          "14:12",
+          null,
+          null,
+          "10:18",
+          "10:48",
+          "10:53",
+          "11:28",
+          "11:22",
+          "11:52",
+          "11:47",
+          "12:22"
+        ],
+        "nums": [
+          "EB",
+          "1",
+          null,
+          "2",
+          "5",
+          "6-I",
+          "6-II",
+          "7",
+          "8",
+          null
+        ],
+        "cycleName": "Cycle 34<br/>No HR | Early Release",
+        "h2": "Open House",
+        "link": "https://www.dist113.org/cms/lib/IL01904711/Centricity/Domain/217/September%207%202023%20Open%20House.pdf",
+        "base": 4
+      },
+      {
+        "times": [
+          "8:10",
+          "9:00",
+          "9:05",
+          "9:56",
+          null,
+          null,
+          "10:01",
+          "10:52",
+          "10:57",
+          "11:47",
+          "11:52",
+          "12:42",
+          "12:32",
+          "13:22",
+          "13:27",
+          "14:18",
+          "14:23",
+          "15:14",
+          null,
+          null,
+          "10:57",
+          "11:27",
+          "11:52",
+          "12:27",
+          "12:20",
+          "12:50",
+          "12:47",
+          "13:22"
+        ],
+        "nums": [
+          "EB",
+          "3",
+          null,
+          "4",
+          "5",
+          "6-I",
+          "6-II",
+          "7",
+          "8",
+          null
+        ],
+        "cycleName": "Cycle 12<br/>No HR | Late Start",
+        "link": "https://www.dist113.org/cms/lib/IL01904711/Centricity/Domain/217/September%208%202023%20Late%20Start%20on%20Cycle%2012%20No%20HR.pdf"
+      }
+    ]
+  },
+  {
+    "startDate": "2023-09-18",
+    "endDate": "2023-09-22",
+    "weekSchedules": [
+      1,
+      2,
+      3,
+      {
+        "times": [
+          "7:15",
+          "8:05",
+          "8:10",
+          "9:02",
+          "9:07",
+          "9:52",
+          "9:57",
+          "10:49",
+          "10:54",
+          "11:44",
+          "11:49",
+          "12:40",
+          "12:29",
+          "13:20",
+          "13:25",
+          "14:17",
+          "14:23",
+          "15:14",
+          null,
+          null,
+          "11:14",
+          "11:44",
+          "11:49",
+          "12:24",
+          "12:20",
+          "12:50",
+          "12:45",
+          "13:20"
+        ],
+        "nums": [
+          "EB",
+          "1",
+          "HR",
+          "2",
+          "5",
+          "6-I",
+          "6-II",
+          "7",
+          "8",
+          null
+        ],
+        "cycleName": "Cycle 34<br/>Extended HR",
+        "h2": "Suicide Prevention Programs",
+        "link": "https://www.dist113.org/cms/lib/IL01904711/Centricity/Domain/217/September%2021%202023%20Extended%20HR%20Suicide%20Prevention%20Programming.pdf"
+      },
+      5
+    ]
+  },
+  {
+    "startDate": "2023-10-02",
+    "endDate": "2023-10-06",
+    "weekSchedules": [1, 2, 3, 4,
+      { "times": ["7:15", "8:05", "8:10", "8:58", "9:03", "10:08", "10:13", "11:01", "11:06", "11:54", "11:59", "12:47", "12:39", "13:27", "13:32", "14:20", "14:25", "15:14", null, null, "11:06", "11:36", "11:59", "12:34", "12:25", "12:55", "12:52", "13:27"], "nums": ["EB", "3", "HR", "4", "5", "6-I", "6-II", "7", "8", null], "cycleName": "Cycle 12<br>Extended HR", "h2": "Pep Rally", "link": "https://www.dist113.org/cms/lib/IL01904711/Centricity/Domain/217/October%206%20Extended%20HR%20Pep%20Rally.pdf", "base": 0 }
+    ]
+  }
+];

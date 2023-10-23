@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DHS Bell Schedule</title>
+
+  <style>
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    #scheduleFrame {
+      border: none;
+      width: 100%;
+      height: 100%;
+    }
+
+    .title {
+      text-align: center;
+    }
+
+    table.schedule {
+      background-color: #ffffff;
+      border-collapse: collapse;
+      border-width: 2px;
+      border-color: #e8e8e8;
+      border-style: solid;
+      color: #000000;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    table.schedule td,
+    table.schedule th {
+      border-width: 2px;
+      border-color: #e8e8e8;
+      border-style: solid;
+      padding: 10px;
+    }
+
+    table.schedule thead {
+      background-color: #e98888;
+    }
+
+    input.pn {
+      width: 60px;
+    }
+
+    input.t {
+      width: 40px;
+    }
+
+    .dash {
+      background-color: #bbbbbb;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="title">
+    <h1>Date</h1>
+    <input type="text" id="h2" title="h2" placeholder="h2">
+    <br>
+    <input type="text" id="cycleName" title="cycleName" placeholder="Name (e.g. Cycle 34<br>Extended HR)">
+    <br>
+    <input type="text" id="link" title="link" placeholder="Link">
+  </div>
+
+  <textarea id="input"></textarea>
+
+  <pre id="out"></pre>
+
+  <button onClick="generate();">Generate</button>
+  <button onClick="insertTest();">Put test button</button>
+
+  <script>
+    function generate() {
+      const currentVariable = {
+        "times": [],
+        "nums": [],
+        "cycleName": "",
+        "h2": "",
+        "link": "",
+        "base": 0
+      };
+
+      const input = document.getElementById("input").value;
+      let blocks = input.split("\n");
+
+      let blockArr = [[], [], [], []];
+      let i = 0;
+
+      let tArr = [];
+      let pnArr = [];
+
+      while (blocks[i].substring(1, 2) != "-") {
+        blockArr[0].push(blocks[i]);
+        i++;
+      }
+
+      while (blocks[i].substring(1, 2) == "-") {
+        blockArr[1].push(blocks[i]);
+        i++;
+      }
+
+      while (blocks[i].substring(0, 5) != "Lunch") {
+        blockArr[2].push(blocks[i]);
+        i++;
+      }
+
+      for (let n = 0; n < 4; n++) {
+        blockArr[3].push(blocks[i]);
+        i++;
+      }
+
+      /**
+       * blocks[0] 0-4
+       * blocks[1] 5-6 (dashes)
+       * blocks[2] 7-9
+       * blocks[3] 10-13 (lunches)
+      */
+
+      for (let i = 4; i >= 0; i--) {
+        if (typeof blockArr[0][i] == "undefined") {
+          pnArr.splice(0, 0, null);
+          tArr.splice(0, 0, null);
+          tArr.splice(1, 0, null);
+        } else {
+          pnArr.splice(0, 0, parseSe(blockArr[0][i])[0]);
+          tArr.splice(0, 0, parseSe(blockArr[0][i])[1]);
+          tArr.splice(1, 0, parseSe(blockArr[0][i])[2]);
+        }
+      }
+
+      for (let i = 0; i <= 1; i++) {
+        pnArr.push(parseSe(blockArr[1][i])[0]);
+        tArr.push(parseSe(blockArr[1][i])[1]);
+        tArr.push(parseSe(blockArr[1][i])[2]);
+      }
+
+      for (let i = 0; i <= 2; i++) {
+        if (typeof blockArr[2][i] == "undefined") {
+          pnArr.push(null);
+          tArr.push(null);
+          tArr.push(null);
+        } else {
+          pnArr.push(parseSe(blockArr[2][i])[0]);
+          tArr.push(parseSe(blockArr[2][i])[1]);
+          tArr.push(parseSe(blockArr[2][i])[2]);
+        }
+      }
+
+      for (let i = 0; i < 4; i++) {
+        tArr.push(parseL(blockArr[3][i])[0]);
+        tArr.push(parseL(blockArr[3][i])[1]);
+      }
+
+      for (i in tArr) {
+        tArr[i] = convertTo12HourFormat([i]);
+      }
+
+      currentVariable.times = tArr;
+      currentVariable.nums = pnArr;
+
+      document.getElementById("out").innerHTML = JSON.stringify(currentVariable);
+
+      navigator.clipboard.writeText(JSON.stringify(currentVariable));
+    }
+
+    function parseSe(s) {
+      s = s.split(" ");
+      let workingArray = [s[0], s[1], s[3]];
+      return workingArray;
+    }
+
+    function parseL(s) {
+      s = s.split(" ");
+      let workingArray = [s[2], s[4]];
+      return workingArray;
+    }
+
+    function convertTo12HourFormat(time) {
+      if (time == null) return null;
+      const [hour, minute] = time.split(":");
+      const hour24 = parseInt(hour) < 5 ? parseInt(hour) + 12 : parseInt(hour);
+      return `${hour24}:${minute}`;
+    }
+
+    function insertTest() {
+      document.getElementById("input").value =
+        `EB 7:15 – 8:05 50
+3 8:10 – 8:58 48
+HR 9:03 – 10:08 65
+4 10:13 – 11:01 48
+5 11:06 – 11:54 48
+6-I 11:59 – 12:47 48
+6-II 12:39 – 1:27 48
+7 1:32 – 2:20 48
+8 2:25 – 3:14 49
+Lunch A 11:06 – 11:36 30
+Lunch B 11:59 – 12:34 35
+Lunch C 12:25 – 12:55 30
+Lunch D 12:52 – 1:27 35`;
+    }
+  </script>
+
+</body>
+
+</html>
