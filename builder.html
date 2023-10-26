@@ -89,7 +89,7 @@
         "cycleName": "",
         "h2": "",
         "link": "",
-        "base": 0
+        "base": 0,
       };
 
       const input = document.getElementById("input").value;
@@ -164,7 +164,7 @@
       }
 
       for (i in tArr) {
-        tArr[i] = convertTo12HourFormat([i]);
+        tArr[i] = convertTo12HourFormat(tArr[i]);
       }
 
       currentVariable.times = tArr;
