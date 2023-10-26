@@ -176,5 +176,13 @@ var scheduleData = [
     "weekSchedules": [1, 2, 3, 4,
       { "times": ["7:15", "8:05", "8:10", "8:58", "9:03", "10:08", "10:13", "11:01", "11:06", "11:54", "11:59", "12:47", "12:39", "13:27", "13:32", "14:20", "14:25", "15:14", null, null, "11:06", "11:36", "11:59", "12:34", "12:25", "12:55", "12:52", "13:27"], "nums": ["EB", "3", "HR", "4", "5", "6-I", "6-II", "7", "8", null], "cycleName": "Cycle 12<br>Extended HR", "h2": "Pep Rally", "link": "https://www.dist113.org/cms/lib/IL01904711/Centricity/Domain/217/October%206%20Extended%20HR%20Pep%20Rally.pdf", "base": 0 }
     ]
+  },
+  {
+    "startDate": "2023-10-23",
+    "endDate": "2023-10-27",
+    "weekSchedules": [1, 2, 3,
+      { "times": ["7:15", "8:05", "8:10", "9:03", "9:08", "9:28", "9:33", "10:26", "10:31", "11:25", "11:30", "12:30", "12:18", "13:18", "13:23", "14:16", "14:21", "15:14", null, null, "10:50", "11:25", "11:30", "12:10", "12:10", "12:45", "12:38", "13:18"], "nums": ["EB", "1", "HR", "2", "5", "6-I", "6-II", "7", "8", null], "cycleName": "Cycle 34<br>Extended HR + Lunch", "h2": "School Chest Kick-Off", "link": "https://www.dist113.org/cms/lib/IL01904711/Centricity/Domain/217/October%2026%202023%20School%20Chest%20Assembly.pdf", "base": 0 },
+      5 
+    ]
   }
 ];
