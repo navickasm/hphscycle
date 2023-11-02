@@ -95,6 +95,16 @@
       const input = document.getElementById("input").value;
       let blocks = input.split("\n");
 
+      blocks.pop(); // All Special Schedules Subject to change
+      const date = blocks.shift(); // January 10, 2024
+      currentVariable.cycleName = blocks.shift();
+      while (blocks[0] != "Period Time Minutes") {
+        currentVariable.h2 = currentVariable.h2 + "\n" + blocks.shift();
+      }
+      currentVariable.h2 = currentVariable.h2.substring(1); // rid \n
+      blocks.shift(); // Period time Minutes
+      currentVariable.link = document.getElementById("link").value;
+
       let blockArr = [[], [], [], []];
       let i = 0;
 
@@ -196,19 +206,25 @@
 
     function insertTest() {
       document.getElementById("input").value =
-        `EB 7:15 – 8:05 50
-3 8:10 – 8:58 48
-HR 9:03 – 10:08 65
-4 10:13 – 11:01 48
-5 11:06 – 11:54 48
-6-I 11:59 – 12:47 48
-6-II 12:39 – 1:27 48
-7 1:32 – 2:20 48
-8 2:25 – 3:14 49
-Lunch A 11:06 – 11:36 30
-Lunch B 11:59 – 12:34 35
-Lunch C 12:25 – 12:55 30
-Lunch D 12:52 – 1:27 35`;
+        `January 10, 2024
+Cycle 56 Extended Homeroom
+Junior Pre-Registration &
+Senior Post-Secondary Meetings
+Period Time Minutes
+EB 7:15 – 8:05 50
+1 8:10 – 9:02 52
+HR 9:07 – 9:52 45
+2 9:57 – 10:49 52
+3 10:54 – 11:44 50
+4-I 11:49 – 12:40 51
+4-II 12:29 – 1:20 51
+7 1:25 – 2:17 52
+8 2:22 – 3:14 52
+Lunch A 11:14 – 11:44 30
+Lunch B 11:49 – 12:24 35
+Lunch C 12:20 – 12:50 30
+Lunch D 12:45 – 1:20 35
+*All special schedules subject to change.`;
     }
   </script>
 
