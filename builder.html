@@ -66,20 +66,20 @@
 
 <body>
   <div class="title">
-    <h1>Date</h1>
-    <input type="text" id="h2" title="h2" placeholder="h2">
-    <br>
-    <input type="text" id="cycleName" title="cycleName" placeholder="Name (e.g. Cycle 34<br>Extended HR)">
-    <br>
+    <h1>DHSCycle Builder 2</h1>
     <input type="text" id="link" title="link" placeholder="Link">
   </div>
 
   <textarea id="input"></textarea>
 
+  <p id="determineddate"></p>
   <pre id="out"></pre>
 
   <button onClick="generate();">Generate</button>
   <button onClick="insertTest();">Put test button</button>
+
+
+  <pre id="schedulejs"></pre>
 
   <script>
     function generate() {
@@ -92,11 +92,25 @@
         "base": 0,
       };
 
+
+      /**
+  {
+    "startDate": "2023-10-23",
+    "endDate": "2023-10-27",
+    "weekSchedules": [1, 2, 3,
+      { "times": ["7:15", "8:05", "8:10", "9:03", "9:08", "9:28", "9:33", "10:26", "10:31", "11:25", "11:30", "12:30", "12:18", "13:18", "13:23", "14:16", "14:21", "15:14", null, null, "10:50", "11:25", "11:30", "12:10", "12:10", "12:45", "12:38", "13:18"], "nums": ["EB", "1", "HR", "2", "5", "6-I", "6-II", "7", "8", null], "cycleName": "Cycle 34<br>Extended HR + Lunch", "h2": "School Chest Kick-Off", "link": "https://www.dist113.org/cms/lib/IL01904711/Centricity/Domain/217/October%2026%202023%20School%20Chest%20Assembly.pdf", "base": 0 },
+      5 
+    ]
+  }
+      */
+      let schedulejs = [];
+
       const input = document.getElementById("input").value;
       let blocks = input.split("\n");
 
       blocks.pop(); // All Special Schedules Subject to change
-      const date = blocks.shift(); // January 10, 2024
+      let date = blocks.shift(); // January 10, 2024
+      date = new Date(date);
       currentVariable.cycleName = blocks.shift();
       while (blocks[0] != "Period Time Minutes") {
         currentVariable.h2 = currentVariable.h2 + "\n" + blocks.shift();
@@ -104,6 +118,8 @@
       currentVariable.h2 = currentVariable.h2.substring(1); // rid \n
       blocks.shift(); // Period time Minutes
       currentVariable.link = document.getElementById("link").value;
+
+      document.getElementById("determineddate").innerHTML = date;
 
       let blockArr = [[], [], [], []];
       let i = 0;
@@ -181,8 +197,11 @@
       currentVariable.nums = pnArr;
 
       document.getElementById("out").innerHTML = JSON.stringify(currentVariable);
+      document.getElementById("schedulejs").innerHTML = JSON.stringify(schedulejs);
 
       navigator.clipboard.writeText(JSON.stringify(currentVariable));
+    
+      
     }
 
     function parseSe(s) {
