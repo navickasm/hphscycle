@@ -184,5 +184,10 @@ var scheduleData = [
       { "times": ["7:15", "8:05", "8:10", "9:03", "9:08", "9:28", "9:33", "10:26", "10:31", "11:25", "11:30", "12:30", "12:18", "13:18", "13:23", "14:16", "14:21", "15:14", null, null, "10:50", "11:25", "11:30", "12:10", "12:10", "12:45", "12:38", "13:18"], "nums": ["EB", "1", "HR", "2", "5", "6-I", "6-II", "7", "8", null], "cycleName": "Cycle 34<br>Extended HR + Lunch", "h2": "School Chest Kick-Off", "link": "https://www.dist113.org/cms/lib/IL01904711/Centricity/Domain/217/October%2026%202023%20School%20Chest%20Assembly.pdf", "base": 0 },
       5 
     ]
+  },
+  {
+    "startDate": "2023-11-06",
+    "endDate": "2023-11-10",
+    "weekSchedules": [2,3,4,5,10]
   }
 ];
