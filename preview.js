@@ -6,12 +6,9 @@ const http = require("http");
 
 const app = express();
 
-//app.use(express.static(path.join(__dirname, "/")));
+app.use(express.static(path.join(__dirname, "/")));
 
-app.get("*", (req, res) => {
-  console.log("req.path", req.path);
-  res.sendFile(path.join(__dirname + "/" + THE_FILE));
-});
+//app.get("*", (req, res) => {res.sendFile(path.join(__dirname + "/" + THE_FILE));});
 
 app.set("port", 4000);
 

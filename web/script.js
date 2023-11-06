@@ -228,11 +228,9 @@ function updateLoadingBar(scheduleTimes, d) {
 
 function processScheduleJSON(date) {
   const scheduleObject = getScheduleData(date);
-console.log(scheduleObject);
   if (scheduleObject) {
     const dayIndex = date.getDay() - 1;
     if (dayIndex >= 0 && dayIndex < scheduleObject.weekSchedules.length) {
-    console.log(scheduleObject.weekSchedules[dayIndex]);
       return scheduleObject.weekSchedules[dayIndex];
     }
   }
@@ -242,14 +240,14 @@ console.log(scheduleObject);
 
 function setTable(date) {
   const sd = getScheduleData(date);
-  console.log(sd)
+  console.log(sd);
   if (typeof sd === 'object') {
     for (let i = 0; i < 5; i++) {
       const scheduleElement = sd.weekSchedules[i];
       if (scheduleElement == 10) {
         updateTableElement(i, "No School");
       } else if (scheduleElement > 0 && scheduleElement < 6) {
-        updateTableElement(i, cycles[i].cycleName);
+        updateTableElement(i, cycles[scheduleElement - 1].cycleName);
       } else {
         updateTableElement(i, sd.weekSchedules[i].cycleName);
       }
@@ -258,7 +256,6 @@ function setTable(date) {
 }
 
 function getScheduleData(date) {
-  console.log("THE DATE IS " + date);
   return scheduleData.find((schedule) => {
     let startDate = new Date(schedule.startDate + "T00:00-0500");
     let endDate = new Date(schedule.endDate + "T00:00-0500");
