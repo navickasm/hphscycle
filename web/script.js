@@ -240,7 +240,6 @@ function processScheduleJSON(date) {
 
 function setTable(date) {
   const sd = getScheduleData(date);
-  console.log(sd);
   if (typeof sd === 'object') {
     for (let i = 0; i < 5; i++) {
       const scheduleElement = sd.weekSchedules[i];
