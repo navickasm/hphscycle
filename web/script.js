@@ -117,15 +117,7 @@ if (localStorage.getItem("renpower") == "true") {
 }
 
 if (!selectedCycle) {
-  document.getElementById("tableschedule").classList.add("hidden");
-  document.getElementById("footer").classList.add("hidden");
-  document.getElementById("header").classList.add("hidden");
-  document.getElementById("pdfschedulecontainer").classList.remove("hidden");
-  document.getElementById("orview").classList.add("hidden");
-  document.getElementById("settings").classList.add("hidden");
-  document.getElementById("thisweektable").classList.add("hidden");
-  document.getElementsByTagName("body")[0].style.overflowX = "hidden";
-  hideLoadingScreen();
+  showPDF(false);
 } else if (dow == 10) {
   showPDF(true);
   document.getElementById("title").textContent = "No School";
@@ -262,6 +254,21 @@ function getScheduleData(date) {
     endDate = new Date(endDate.valueOf() + 1000 * 3600 * 24);
     return date >= startDate && date <= endDate;
   });
+}
+
+function showPDF(showTitle) {
+  document.getElementById("informationbox").classList.add("hidden");
+  document.getElementById("footer").classList.add("hidden");
+  if (!showTitle) { document.getElementById("header").classList.add("hidden"); }
+  else {
+    let subtitle = document.getElementById("subtitle");
+    subtitle.parentNode.removeChild(subtitle);
+  }
+  document.getElementById("pdfschedulecontainer").classList.remove("hidden");
+  document.getElementById("orview").classList.add("hidden");
+  document.getElementById("settings").classList.add("hidden");
+  document.getElementById("thisweektable").classList.add("hidden");
+  document.getElementsByTagName("body")[0].style.overflowX = "hidden";
 }
 
 function updateTableElement(tableNum, text) {
