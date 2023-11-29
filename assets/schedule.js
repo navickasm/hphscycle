@@ -202,5 +202,12 @@ var scheduleData = [
     "endDate": "2023-11-24",
     "weekSchedules": [1,
       {"times":["9:00","9:09","9:14","9:49","9:54","10:29","10:34","11:09","11:14","11:49","11:54","12:29","12:34","13:09","13:14","13:49","13:54","14:34","14:39","15:14","11:14","11:44","11:54","12:24","12:15","12:45","12:34","13:09"],"nums":["EB","1","2","3","4","5-I","5-II","6","7","8"],"cycleName":"Cycle LS<br>+5 mins 7th","h2":"School Chest Final Announcement – 7th per.","link":"https://www.dist113.org/cms/lib/IL01904711/Centricity/Domain/217/November%2021%202023%20School%20Chest%20Ends.pdf","base":0}, 10, 10, 10]
-  }
+  },
+  {
+    "startDate": "2023-11-27",
+    "endDate": "2023-12-1",
+    "weekSchedules": [1,2,
+      { "times": ["7:15", "8:05", "8:10", "9:02", "9:07", "9:52", "9:57", "10:49", "10:54", "11:44", "11:49", "12:40", "12:29", "13:20", "13:25", "14:17","14:22","15:14",null, null, "11:14","11:44","11:49","12:24","12:20","12:50","12:45","13:20"], "nums": ["EB", "1", "HR", "2", "3", "4-I", "4-II", "7", "8", null], "cycleName": "Cycle 56<br>Extended HR", "h2": "Junior Post-Secondary Meeting", "link": "https://www.dist113.org/cms/lib/IL01904711/Centricity/Domain/217/November%2029%202023%20Extended%20HR%20Jr%20Class%20Postsecondary.pdf", "base": 0 }
+    ,4,5]
+  },
 ];
