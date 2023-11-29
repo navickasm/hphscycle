@@ -205,7 +205,7 @@ var scheduleData = [
   },
   {
     "startDate": "2023-11-27",
-    "endDate": "2023-12-1",
+    "endDate": "2023-11-30",
     "weekSchedules": [1,2,
       { "times": ["7:15", "8:05", "8:10", "9:02", "9:07", "9:52", "9:57", "10:49", "10:54", "11:44", "11:49", "12:40", "12:29", "13:20", "13:25", "14:17","14:22","15:14",null, null, "11:14","11:44","11:49","12:24","12:20","12:50","12:45","13:20"], "nums": ["EB", "1", "HR", "2", "3", "4-I", "4-II", "7", "8", null], "cycleName": "Cycle 56<br>Extended HR", "h2": "Junior Post-Secondary Meeting", "link": "https://www.dist113.org/cms/lib/IL01904711/Centricity/Domain/217/November%2029%202023%20Extended%20HR%20Jr%20Class%20Postsecondary.pdf", "base": 0 }
     ,4,5]
