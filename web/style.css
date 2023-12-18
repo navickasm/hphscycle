@@ -36,6 +36,12 @@ body {
     }
 }
 
+@media only screen and (min-width: 600px) {
+   table.finalschedule {
+        width:600px;
+    }
+}
+
 #pdfschedule {
     display: block;
     margin-right: auto;
@@ -64,7 +70,6 @@ table {
 table.schedule {
     width: 200px;
 }
-
 
 table td,
 table th {
