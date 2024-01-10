@@ -8,7 +8,6 @@ document.documentElement.style.setProperty("--border", localStorage.getItem("bor
 document.documentElement.style.setProperty("--pn", localStorage.getItem("pncolor"));
 
 function valentine() {
-
   document.documentElement.style.setProperty("--light",     "#732b41");
   document.documentElement.style.setProperty("--main",      "#d84896");
   document.documentElement.style.setProperty("--link",      "#000000");
