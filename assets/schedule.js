@@ -246,5 +246,12 @@ var scheduleData = [
     "startDate": "2024-02-12",
     "endDate": "2024-02-16",
     "weekSchedules": [2,3,4,5,10]
+  },
+  {
+    "startDate": "2024-03-03",
+    "endDate": "2024-03-07",
+    "weekSchedules": [1,
+      { "times": ["7:15", "8:05", "8:10", "9:02", "9:07", "9:52", "9:57", "10:49", "10:54", "11:44", "11:49", "12:40", "12:29", "13:20", "13:25", "14:17","14:22","15:14",null, null, "11:14","11:44","11:49","12:24","12:20","12:50","12:45","13:20"], "nums": ["EB", "1", "HR", "2", "3", "4-I", "4-II", "5", "6", null], "cycleName": "Cycle 78<br>Extended HR", "h2": "Illinois Youth Survey", "link": "https://www.dist113.org/cms/lib/IL01904711/Centricity/Domain/217/March%205%202024%20Extended%20HR%20Illinois%20Youth%20Survey.pdf", "base": 0 },
+    3, 4, 5]
   }
 ];
