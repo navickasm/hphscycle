@@ -297,5 +297,13 @@ var scheduleData = [
         "cycleName": "Cycle 100", "h2": ""
       }
     ]
+  },
+  {
+    "startDate": "2024-04-15",
+    "endDate": "2024-04-19",
+    "weekSchedules": [1,2,3,4,
+      { "times": ["7:15", "8:05",null, null, "8:10", "9:00", "9:05", "9:55", "10:00", "10:50", "10:55", "11:45", "11:34", "12:24", "12:29", "13:19", "13:29", "14:19","14:24","15:14", "10:20","10:50","10:55","11:29","11:26","11:56","11:50","12:24"], "nums": ["EB", null, "3", "4", "5", "6-I", "6-II", "7A", "7B", "8"], "cycleName": "Cycle 12<br>p.7 Split Assembly", "h2": "Arts Alive! at DHS Assembly", "link": "https://www.dist113.org/cms/lib/IL01904711/Centricity/Domain/217/April%2019%202024%20Arts%20Alive%20Assembly.pdf", "base": 0 }
+      
+    ]
   }
 ];
