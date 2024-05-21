@@ -305,5 +305,13 @@ var scheduleData = [
       { "times": ["7:15", "8:05",null, null, "8:10", "9:00", "9:05", "9:55", "10:00", "10:50", "10:55", "11:45", "11:34", "12:24", "12:29", "13:19", "13:29", "14:19","14:24","15:14", "10:20","10:50","10:55","11:29","11:26","11:56","11:50","12:24"], "nums": ["EB", null, "3", "4", "5", "6-I", "6-II", "7A", "7B", "8"], "cycleName": "Cycle 12<br>p.7 Split Assembly", "h2": "Arts Alive! at DHS Assembly", "link": "https://www.dist113.org/cms/lib/IL01904711/Centricity/Domain/217/April%2019%202024%20Arts%20Alive%20Assembly.pdf", "base": 0 }
       
     ]
+  },
+  {
+    "startDate": "2024-05-20",
+    "endDate": "2024-05-24",
+    "weekSchedules": [1,
+      { "times": ["7:15", "8:05", "8:10", "9:05", null, null, "9:10", "10:05", "10:10", "11:07", "11:12", "12:09", "11:52", "12:49", "12:54", "13:49","13:54","14:49",null, null, "10:37","11:07","11:12","11:47","11:46","12:16","12:14","12:49"], "nums": ["EB", "1", null, "2", "3", "4-I", "4-II", "5", "6", null], "cycleName": "Cycle 78<br>No HR, Early Release", "h2": "Graduation for Class of 2024", "link": "https://www.dist113.org/cms/lib/IL01904711/Centricity/Domain/217/May%2021%202024%20Early%20Release%20Graduation.pdf", "base": 0 },
+      { "times": ["8:10", "9:00", "9:05", "9:56", null, null, "10:01", "10:52", "10:57", "11:47", "11:52", "12:42", "12:32", "13:22", "13:27", "14:18","14:23","15:14",null, null, "10:57","11:27","11:52","12:27","12:20","12:50","12:47","13:22"], "nums": ["EB", "1", null, "2", "3", "4-I", "4-II", "7", "8", null], "cycleName": "Cycle 56<br>No HR, Late Start", "h2": "Day After Graduation", "link": "https://www.dist113.org/cms/lib/IL01904711/Centricity/Domain/217/May%2022%202024%20Late%20Start%20on%20Cycle%2056%20No%20HR.pdf", "base": 0 },
+      4,5]
   }
 ];
