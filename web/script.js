@@ -157,6 +157,7 @@ function cycleNums(arr) {
     if (arr[i] == null) {
       document.getElementById("se-" + i).classList.add("hidden");
     } else {
+      console.log("n" + i);
       document.getElementById("n" + i).innerHTML = arr[i];
     }
   }

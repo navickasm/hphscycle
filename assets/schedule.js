@@ -313,5 +313,14 @@ var scheduleData = [
       { "times": ["7:15", "8:05", "8:10", "9:05", null, null, "9:10", "10:05", "10:10", "11:07", "11:12", "12:09", "11:52", "12:49", "12:54", "13:49","13:54","14:49",null, null, "10:37","11:07","11:12","11:47","11:46","12:16","12:14","12:49"], "nums": ["EB", "1", null, "2", "3", "4-I", "4-II", "5", "6", null], "cycleName": "Cycle 78<br>No HR, Early Release", "h2": "Graduation for Class of 2024", "link": "https://www.dist113.org/cms/lib/IL01904711/Centricity/Domain/217/May%2021%202024%20Early%20Release%20Graduation.pdf", "base": 0 },
       { "times": ["8:10", "9:00", "9:05", "9:56", null, null, "10:01", "10:52", "10:57", "11:47", "11:52", "12:42", "12:32", "13:22", "13:27", "14:18","14:23","15:14",null, null, "10:57","11:27","11:52","12:27","12:20","12:50","12:47","13:22"], "nums": ["EB", "1", null, "2", "3", "4-I", "4-II", "7", "8", null], "cycleName": "Cycle 56<br>No HR, Late Start", "h2": "Day After Graduation", "link": "https://www.dist113.org/cms/lib/IL01904711/Centricity/Domain/217/May%2022%202024%20Late%20Start%20on%20Cycle%2056%20No%20HR.pdf", "base": 0 },
       4,5]
+  },
+  {
+    "startDate": "2024-08-12",
+    "endDate": "2024-08-16",
+    "weekSchedules": [10, 10,
+      { "times": ["8:10", "8:45", "9:14", "9:49", "9:54", "10:29", "10:34", "11:09", "11:14", "11:54", "11:59", "12:39", "12:34", "13:14", "13:59", "14:34", "13:59", "14:34", "14:39", "15:14", "11:24", "11:54", "11:59", "12:29", "12:22", "12:52", "12:44", "13:44", "8:50", "9:09"], "nums": ["EB", "1", "2", "3", "4", "5-I", "5-II", "6", "7", "8", "HR"], "cycleName": "Cycle LS<br>Extended EB, HR", "h2": "First Day of School", "link": "https://docs.google.com/document/d/16HCtZC1pftE2fYPKTqe4gl2VqLvQDiPhQw1OucuQYbg/edit", "base": 0 },
+      { "times": ["8:34", "9:09", "9:14", "9:49", "9:54", "10:29", "10:34", "11:09", "11:14", "11:54", "11:59", "12:39", "12:34", "13:14", "13:59", "14:34", "13:59", "14:34", "14:39", "15:14", "11:24", "11:54", "11:59", "12:29", "12:22", "12:52", "12:44", "13:44", null, null], "nums": ["EB", "1", "2", "3", "4", "5-I", "5-II", "6", "7", "8", null], "cycleName": "Cycle LS<br>Extended EB", "h2": "Second Day of School", "link": "https://docs.google.com/document/d/16HCtZC1pftE2fYPKTqe4gl2VqLvQDiPhQw1OucuQYbg/edit", "base": 0 },
+      { "times": ["8:34", "9:09", "9:14", "9:49", "9:54", "10:29", "10:34", "11:09", "11:14", "11:54", "11:59", "12:39", "12:34", "13:14", "13:59", "14:34", "13:59", "14:34", "14:39", "15:14", "11:24", "11:54", "11:59", "12:29", "12:22", "12:52", "12:44", "13:44", null, null], "nums": ["EB", "1", "2", "3", "4", "5-I", "5-II", "6", "7", "8", null], "cycleName": "Cycle LS<br>Extended EB", "h2": "Third Day of School", "link": "https://docs.google.com/document/d/16HCtZC1pftE2fYPKTqe4gl2VqLvQDiPhQw1OucuQYbg/edit", "base": 0 }
+      ]
   }
 ];
