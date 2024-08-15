@@ -156,6 +156,7 @@ function cycleNums(arr) {
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] == null) {
       document.getElementById("se-" + i).classList.add("hidden");
+      console.log("se-" + i + " hidden")
     } else {
       console.log("n" + i);
       document.getElementById("n" + i).innerHTML = arr[i];
@@ -177,9 +178,12 @@ function highlightCurrentPeriod(scheduleTimes, isBlue, d) {
     const endTime = convertToMinutes(scheduleTimes[i + 1]);
 
     const se = document.getElementById(`se-${i / 2}`);
+    console.log(se)
 
     let workingTitle = " mins";
-
+    
+    console.log(scheduleTimes[i] + ' ' + endTime + ' ' + startTime);
+    
     workingTitle = (endTime - startTime) + workingTitle;
     
     if (currentMinutesTotal >= startTime && currentMinutesTotal <= endTime) {
@@ -193,6 +197,7 @@ function highlightCurrentPeriod(scheduleTimes, isBlue, d) {
 
     se.title = workingTitle;
   }
+  console.log(scheduleTimes);
 }
 
 function updateLoadingBar(scheduleTimes, d) {
