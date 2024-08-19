@@ -8,14 +8,15 @@ const monthNames = [
   "July", "August", "September", "October", "November", "December"
 ];
 
-const timesLS = ["9:00", "9:09", "9:14", "9:49", "9:54", "10:29", "10:34", "11:09", "11:14", "11:54", "11:59", "12:39", "12:34", "13:14", "13:19", "13:54", "13:59", "14:34", "14:39", "15:14", "11:24", "11:54", "11:59", "12:29", "12:22", "12:52", "12:44", "13:14"];
-const timesTF = ["7:15", "8:05", "8:10", "9:07", "9:12", "9:24", "9:29", "10:26", "10:31", "11:28", "11:37", "12:34", "12:13", "13:10", "13:15", "14:12", "14:17", "15:14", null, null, "11:02", "11:32", "11:33", "12:08", "12:07", "12:37", "12:39", "13:10"];
+const timesLS = ["8:00", "9:09", "9:14", "9:49", "9:54", "10:29", "10:34",  "11:09", null, null,"11:14", "11:54", "11:59", "12:39", "12:34", "13:14", "13:19", "13:54", "13:59", "14:34", "14:39", "15:14", "11:24", "11:54", "11:59", "12:29", "12:22", "12:52", "12:44", "13:14"];
+const timesEarlyHR = ["7:15", "8:05", null, null, "8:10", "9:07", "9:12", "9:24", "9:29", "10:26", "10:31", "11:28", "11:33", "12:30", "12:08", "13:05", "13:10", "14:07", "14:12", "15:09", null, null, "10:48", "11:28", "11:33", "12:03", "12:03", "12:33", "12:35", "13:05"];
+const timesLateHR = ["7:15", "8:05", null, null, "8:10", "9:07", "9:12", "10:09", "10:14", "10:26", "10:31", "11:28", "11:33", "12:30", "12:08", "13:05", "13:10", "14:07", "14:12", "15:09", null, null, "10:48", "11:28", "11:33", "12:03", "12:03", "12:33", "12:35", "13:05"];
 
-const numsLS = ["EB*", "1", "2", "3", "4", "5-I", "5-II", "6", "7", "8"];
-const nums78 = ["EB", "1", "HR", "2", "3", "4-I", "4-II", "5", "6", null];
-const nums56 = ["EB", "1", "HR", "2", "3", "4-I", "4-II", "7", "8", null];
-const nums34 = ["EB", "1", "HR", "2", "5", "6-I", "6-II", "7", "8", null];
-const nums12 = ["EB", "3", "HR", "4", "5", "6-I", "6-II", "7", "8", null];
+const numsLS = ["S.C.", "1", "2", "3", null, "4", "5-I", "5-II", "6", "7", "8"];
+const nums48 = ["EB", null, "1", "HR", "2", "3", "5-I", "5-II", "6", "7", null];
+const nums37 = ["EB", null, "1", "2", "HR", "4", "5-I", "5-II", "6", "8", null];
+const nums26 = ["EB", null, "1", "HR", "3", "4", "5-I", "5-II", "7", "8", null];
+const nums15 = ["EB", null, "2", "3", "HR", "4", "6-I", "6-II", "7", "8", null];
 
 const cycles = [
   {
@@ -24,24 +25,24 @@ const cycles = [
     cycleName: "Cycle LS"
   },
   {
-    times: timesTF,
-    nums: nums78,
-    cycleName: "Cycle 78"
+    times: timesEarlyHR,
+    nums: nums48,
+    cycleName: "Cycle 48"
   },
   {
-    times: timesTF,
-    nums: nums56,
-    cycleName: "Cycle 56"
+    times: timesLateHR,
+    nums: nums37,
+    cycleName: "Cycle 37"
   },
   {
-    times: timesTF,
-    nums: nums34,
-    cycleName: "Cycle 34"
+    times: timesEarlyHR,
+    nums: nums26,
+    cycleName: "Cycle 26"
   },
   {
-    times: timesTF,
-    nums: nums12,
-    cycleName: "Cycle 12"
+    times: timesLateHR,
+    nums: nums15,
+    cycleName: "Cycle 15"
   },
   {
     times: SpecialSchedule.times,

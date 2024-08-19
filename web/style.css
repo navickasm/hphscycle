@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Slab&display=swap');
 
 :root {
-    --main: #e98888;
-    --light: #e6c3c3;
-    --link: #eea5a5;
+    --main: #455c91;
+    --light: #ccd3e1;
+    --link: #8898b9;
     --bg: #ffffff;
-    --text: #000000;
-    --othertext: #000000;
-    --pn: #000000;
+    --text: #231f20;
+    --othertext: #231f20;
+    --pn: #231f20;
     --border: #e8e8e8;
 }
 
