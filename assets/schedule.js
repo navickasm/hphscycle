@@ -322,5 +322,12 @@ var scheduleData = [
       { "times": ["8:34", "9:09", null, null, "9:14", "9:49", "9:54", "10:29", "10:34", "11:09", "11:14", "11:54", "11:59", "12:39", "12:34", "13:14", "13:19", "13:54", "13:59", "14:34", "14:39", "15:14", "11:24", "11:54", "11:59", "12:29", "12:22", "12:52", "12:44", "13:14"], "nums": ["EB", null, "1", "2", "3", "4", "5-I", "5-II", "6", "7", "8"], "cycleName": "Cycle LS<br>Extended EB", "h2": "Second Day of School", "link": "https://docs.google.com/document/d/16HCtZC1pftE2fYPKTqe4gl2VqLvQDiPhQw1OucuQYbg/edit", "base": 0 },
       { "times": ["8:34", "9:09", null, null, "9:14", "9:49", "9:54", "10:29", "10:34", "11:09", "11:14", "11:54", "11:59", "12:39", "12:34", "13:14", "13:19", "13:54", "13:59", "14:34", "14:39", "15:14", "11:24", "11:54", "11:59", "12:29", "12:22", "12:52", "12:44", "13:14"], "nums": ["EB", null, "1", "2", "3", "4", "5-I", "5-II", "6", "7", "8"], "cycleName": "Cycle LS<br>Extended EB", "h2": "Third Day of School", "link": "https://docs.google.com/document/d/16HCtZC1pftE2fYPKTqe4gl2VqLvQDiPhQw1OucuQYbg/edit", "base": 0 }
       ]
+  },
+  {
+    "startDate": "2024-08-19",
+    "endDate": "2024-08-23",
+    "weekSchedules": [1,
+      { "times": ["7:15", "8:05", "8:10", "9:02", null, null, "9:07", "9:52", "9:57", "10:49", "10:54", "11:44", "11:49", "12:40", "12:29", "13:20", "13:25", "14:17", "14:22", "15:14",null, null, "11:14","11:44","11:49","12:24","12:20","12:50","12:45","13:20"], "nums": ["EB", "1", null, "HR", "2", "3", "4-I", "4-II", "5", "6", null], "cycleName": "Cycle 78<br>Extended HR", "h2": "Senior Class Postsecondary Meeting", "link": "https://drive.google.com/file/d/1qswvXxVuyXjkeVHQNpV_cTT_OJBjg7kD/view", "base": 0 },
+      3,4,5]
   }
 ];
